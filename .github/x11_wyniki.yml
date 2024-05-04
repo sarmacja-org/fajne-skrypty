@@ -1,0 +1,15 @@
+name: wyniki-x11
+on:
+  workflow_dispatch:
+jobs:
+  wyslij-powiadomienia:
+    runs-on: ubuntu-latest
+    environment:
+      X11_DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID_ROZRYWKA }}
+      DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: |
+          pip3 install -r ./skrypty/x11_wyniki_requirements.txt
+          python3 ./skrypty/x11_wyniki.py
