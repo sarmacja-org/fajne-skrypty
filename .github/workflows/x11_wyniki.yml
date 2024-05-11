@@ -4,7 +4,7 @@ on:
 jobs:
   wyslij-powiadomienia:
     runs-on: ubuntu-latest
-    environment:
+    env:
       X11_DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID_ROZRYWKA }}
       DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
     steps:
