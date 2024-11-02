@@ -2,7 +2,7 @@ name: wyniki-x11
 on:
   workflow_dispatch:
   schedule:
-    - cron: "35 17 * * 6"
+    - cron: "35 18 * * 6"
 jobs:
   wyslij-powiadomienia:
     runs-on: ubuntu-latest
